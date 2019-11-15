@@ -60,9 +60,9 @@ gulp.task('css-libs', function() {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('clean', async function() {
-    return del.sync('./dist'); // Удаляем папку dist перед сборкой
-});
+// gulp.task('clean', async function() {
+//     return del.sync('./dist'); // Удаляем папку dist перед сборкой
+// });
 
 gulp.task('img', function() {
     return gulp.src('./src/img/**/*') // Берем все изображения из app
@@ -108,5 +108,5 @@ gulp.task('watch', function() {
 });
 gulp.task('default', gulp.parallel('css-libs', 'sass', 'browser-sync', 'watch'));
 // gulp.task('default', gulp.parallel('css-libs', 'sass', 'scripts', 'browser-sync', 'watch'));
-gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass'));
+gulp.task('build', gulp.parallel('prebuild', 'img', 'sass'));
 // gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
