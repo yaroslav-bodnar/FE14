@@ -14,8 +14,17 @@
 			<ul class="menu">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#about">About</a></li>
-				<li><a href="#skills">Skills</a></li>
+				<li><a href="#skills">Skills</a>
+					<template id="submenu">
+						<ul>
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">JavaScript</a></li>
+						</ul>
+					</template>
+				</li>
 				<li><a href="#contacts">Contacts</a></li>
+				<li><a href="#news">News</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -27,6 +36,7 @@
 			<figure class="my-photo">
 				<img src="./img/my_photo.png" alt="photo">
 				<figcaption>My photo</figcaption>
+				<time>21.11.2019</time>
 			</figure>
 
 			<div class="my-dsc">
@@ -45,11 +55,11 @@
 		<section id="about">
 			<div class="my-about">
 				<h2>About My</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem incidunt sapiente aliquid officia praesentium beatae, voluptates aut. Hic iste commodi cumque sunt non quis, saepe mollitia magni aspernatur repudiandae quibusdam nobis maxime labore nam atque ullam accusantium aliquid beatae nulla! Ipsam eius fuga, velit et sunt omnis molestias nesciunt asperiores.</p>
+				<p><mark>Lorem</mark> ipsum dolor sit amet, consectetur adipisicing elit. Rem incidunt sapiente aliquid officia praesentium beatae, voluptates aut. <mark>Lorem</mark> Hic iste commodi cumque sunt non quis, saepe mollitia magni aspernatur repudiandae quibusdam nobis maxime labore nam atque ullam accusantium aliquid beatae nulla! Ipsam eius fuga, velit et sunt omnis molestias nesciunt asperiores.</p>
 				
 				<details>
 					<summary>More details</summary>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis doloremque ut tempora, provident aspernatur voluptate nesciunt soluta eveniet magni enim odit libero debitis illum consectetur, labore sit suscipit cum deleniti sapiente excepturi quisquam aut perspiciatis, voluptates dolorem. Eos non eaque, explicabo, perspiciatis et saepe amet accusantium fuga reiciendis sed odio temporibus. Iure iste culpa sunt vel veritatis optio natus voluptatem ex perspiciatis, rerum dolores doloremque nisi facere commodi quasi non blanditiis veniam voluptate, totam explicabo quia quisquam voluptatibus quaerat! Dolores deserunt, vel quidem nulla facilis totam sed asperiores cum ratione. Earum, accusantium, veniam! Animi eum provident unde, dignissimos doloribus similique?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis doloremque ut <wbr> tempora, provident aspernatur voluptate nesciunt soluta eveniet magni enim odit libero debitis illum consectetur, labore sit suscipit cum deleniti sapiente excepturi quisquam aut perspiciatis, voluptates dolorem. Eos non <wbr> eaque, explicabo, perspiciatis et saepe amet accusantium fuga reiciendis sed odio <wbr> temporibus. Iure iste culpa sunt vel veritatis optio natus voluptatem ex perspiciatis, rerum dolores doloremque nisi facere commodi quasi non blanditiis veniam voluptate, totam explicabo quia quisquam voluptatibus quaerat! Dolores deserunt, vel quidem nulla facilis totam sed asperiores cum ratione. Earum, accusantium, veniam! Animi eum provident unde, dignissimos doloribus similique?</p>
 				</details>
 			</div>
 		</section>
@@ -67,7 +77,11 @@
 
 			<video controls="#">
 				<source src="./video/Landscape.mp4" type="video/mp4"></source>
+				<track kind="subtitles" src="./subtitles/Joker.srt" srclang="rus" label="Русский">
 			</video>
+
+
+			<embed src="video/Landscape.mp4" type="video/mp4">
 		</section>
 		<!-- / section - audio_and_video -->
 
@@ -76,7 +90,7 @@
 		<!-- section - skills -->
 		<section id="skills">
 			<div class="my-skills">
-				<table>
+				<table align="center" cellpadding="5px" cellspacing="5px">
 					<caption>My skills</caption>
 					<thead>
 						<tr>
@@ -94,30 +108,92 @@
 					</tbody>
 					<tfoot>
 						<tr>
-							<th>Level</th>
-							<td>Junior FrontEnd</td>
+							<th>Level:</th>
+							<td colspan="2">Junior FrontEnd</td>
 						</tr>
 					</tfoot>
 				</table>
+
+
+				<canvas id="canvas-for-users">
+
+				</canvas>
 			</div>
 		</section>
 		<!-- / section - skills -->
 
+
+
+		<!-- section - contacts -->
 		<section id="contacts">
 			<form id="form" class="form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
 				<fieldset>
 					<legend>Write to me</legend>
 
 					<p>
-						<input type="text" placeholder="* Full name" required name="name" id="form_name" minlength="2" maxlength="25">
+						<input type="text" placeholder="* Full name" required name="name" id="form_name" minlength="2" maxlength="25"><br>
 						<input type="email" placeholder="* Add Email" required name="mail" id="form_mail" minlength="2" maxlength="25">
-						<input type="tel" placeholder="* Phones" required name="tel" id="form_tel" pattern="\+[0-9]{5,14}|[0-9]{5,14}">
+						<input type="tel" placeholder="* Phones" required name="tel" id="form_tel" pattern="\+[0-9]{5,14}|[0-9]{5,14}"><br>
+
+						<input id="price" oninput="out.value=(price.value)" type="number" name="cm" placeholder="* Enter project price" autofocus><br>
+						<span>Price project&nbsp;&nbsp;
+							<output id="out">0</output>
+							&nbsp;&nbsp;$
+						</span><br>
+
+						<input list="user-text">
+						<datalist id="user-text">
+							<option value="first-text"></option>
+							<option value="second-text"></option>
+						</datalist>
+
+						<button type="submit">Submit</button>
+						<button type="reset">Reset</button>
 					</p>
 
 				</fieldset>
 			</form>
+			<dialog open>
+				<p>Dialog!</p>
+			</dialog>
 		</section>
+		<!-- / section - contacts -->
 
+
+
+
+		<!-- section - news -->
+		<section id="news">
+			<article class="first-news">
+				<h3>What’s New in ES2019?</h3>
+				<p>ES2019 or ES10 is the 2019 version of JavaScript. After the major 2015 update, JavaScript has been evolving every year. Developers get a small set of useful features, that helps us balance between innovation and stability.<br>
+				You can also follow the evolution of JavaScript in this blog, because the first article was published back in 2015. It is now time that we examine the ES2019 updates from a practical point of view. As usual, don't expect a lengthy description of theoretical edge cases. This article rather doubles down on practical use cases.</p>
+				<p><bdi>FrontEnd</bdi> - the separation of concerns between the presentation layer</p>
+				<time>21.11.2019</time><br>
+
+				<p class="title-for-meter">usefulness news</p>
+				<meter value="70" max="100" low="10" high="60"></meter>
+			</article>
+
+			<aside>
+				<h3>JavaScript compatibility table</h3>
+				<p><a href="#">Object.fromEntries</a></p>
+				<p><a href="#">String trimming</a></p>
+				<p><a href="#">Array.prototype.flat</a></p>
+				<p><a href="#">Array.prototype.flatMap</a></p>
+				<p><a href="#">Optional catch binding</a></p>
+				<p><a href="#">Object.fromEntries</a></p>
+				<p><a href="#">String trimming</a></p>
+				<p><a href="#">Array.prototype.flat</a></p>
+				<p><a href="#">Array.prototype.flatMap</a></p>
+				<p><a href="#">Optional catch binding</a></p>
+				<p><a href="#">String trimming</a></p>
+				<p><a href="#">Array.prototype.flat</a></p>
+				<p><a href="#">Array.prototype.flatMap</a></p>
+				<p><a href="#">Optional catch binding</a></p>
+			</aside>
+		</section>
+		<!-- section - news -->
 	</main>
 
 	<footer>
