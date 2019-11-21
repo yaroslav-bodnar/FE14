@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Task_3.1</title>
+
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<header>
+		<!-- <h1 class="hidden">main page</h1> -->
+
+		<nav>
+			<ul class="menu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#contacts">Contacts</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<!-- section - home -->
+		<section class="home">
+
+			<figure class="my-photo">
+				<img src="./img/my_photo.png" alt="photo">
+				<figcaption>My photo</figcaption>
+			</figure>
+
+			<div class="my-dsc">
+				<p>Hi, My name is</p>
+				<h2>Yaroslav Bodnar</h2>
+				<h3>FrontEnd developer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni accusamus, expedita praesentium id odio. Qui nostrum reiciendis, totam doloremque labore.<a href="#about">&nbsp;&nbsp;read more...</a></p>
+			</div>
+
+		</section>
+		<!-- / section - home -->
+
+
+
+		<!-- section - about -->
+		<section id="about">
+			<div class="my-about">
+				<h2>About My</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem incidunt sapiente aliquid officia praesentium beatae, voluptates aut. Hic iste commodi cumque sunt non quis, saepe mollitia magni aspernatur repudiandae quibusdam nobis maxime labore nam atque ullam accusantium aliquid beatae nulla! Ipsam eius fuga, velit et sunt omnis molestias nesciunt asperiores.</p>
+				
+				<details>
+					<summary>More details</summary>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis doloremque ut tempora, provident aspernatur voluptate nesciunt soluta eveniet magni enim odit libero debitis illum consectetur, labore sit suscipit cum deleniti sapiente excepturi quisquam aut perspiciatis, voluptates dolorem. Eos non eaque, explicabo, perspiciatis et saepe amet accusantium fuga reiciendis sed odio temporibus. Iure iste culpa sunt vel veritatis optio natus voluptatem ex perspiciatis, rerum dolores doloremque nisi facere commodi quasi non blanditiis veniam voluptate, totam explicabo quia quisquam voluptatibus quaerat! Dolores deserunt, vel quidem nulla facilis totam sed asperiores cum ratione. Earum, accusantium, veniam! Animi eum provident unde, dignissimos doloribus similique?</p>
+				</details>
+			</div>
+		</section>
+		<!-- / section - about -->
+
+
+
+		<!-- section - audio_and_video -->
+		<section id="audio_and_video">
+
+			<h2>About My video and audio</h2>
+			<audio controls="#">
+				<source src="./audio/samsung_galaxy_synth_bell-namobilu.com.mp3" type="audio/mpeg"></source>
+			</audio>
+
+			<video controls="#">
+				<source src="./video/Landscape.mp4" type="video/mp4"></source>
+			</video>
+		</section>
+		<!-- / section - audio_and_video -->
+
+
+
+		<!-- section - skills -->
+		<section id="skills">
+			<div class="my-skills">
+				<table>
+					<caption>My skills</caption>
+					<thead>
+						<tr>
+							<th>HTML</th>
+							<th>CSS</th>
+							<th>JavaScript</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>70%</td>
+							<td>80%</td>
+							<td>40%</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Level</th>
+							<td>Junior FrontEnd</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</section>
+		<!-- / section - skills -->
+
+		<section id="contacts">
+			<form id="form" class="form" action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+				<fieldset>
+					<legend>Write to me</legend>
+
+					<p>
+						<input type="text" placeholder="* Full name" required name="name" id="form_name" minlength="2" maxlength="25">
+						<input type="email" placeholder="* Add Email" required name="mail" id="form_mail" minlength="2" maxlength="25">
+						<input type="tel" placeholder="* Phones" required name="tel" id="form_tel" pattern="\+[0-9]{5,14}|[0-9]{5,14}">
+					</p>
+
+				</fieldset>
+			</form>
+		</section>
+
+	</main>
+
+	<footer>
+		
+	</footer>
+</body>
+</html>
