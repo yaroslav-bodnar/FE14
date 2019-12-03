@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BigFish';
+    src: url('BigFishCasuals.eot');
+    src: url('../fonts/BigFishCasuals.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BigFishCasuals.woff') format('woff'),
+        url('../fonts/BigFishCasuals.woff2') format('woff2'),
+        url('../fonts/BigFishCasuals.ttf') format('truetype');,
+    font-style: normal;
+}
