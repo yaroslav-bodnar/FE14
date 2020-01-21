@@ -1,2 +1,112 @@
+.header {
+  width: 100%;
+  background: black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__logo_and_menu {
+    width: 70%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__logo {
+    margin: 0px 0px 0px 10px;
+    color: white;
+    font-size: 22px; }
+    .header__logo span {
+      color: gold; }
+  .header__menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 100; }
+    .header__menu li {
+      margin: 0px 0px 0px 3%; }
+      .header__menu li a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px; }
+  .header__submenu {
+    position: absolute; }
+  .header__buttons_for_user {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header__buttons_for_user__first {
+      position: relative; }
+      .header__buttons_for_user__first button {
+        margin: 0px;
+        width: 130px;
+        height: 30px;
+        border: 1px solid gold;
+        border-radius: 3px;
+        background: transparent;
+        color: white; }
+      .header__buttons_for_user__first span {
+        position: absolute;
+        color: white;
+        top: 8px;
+        left: 100px; }
+    .header__buttons_for_user__second {
+      position: relative; }
+      .header__buttons_for_user__second button {
+        margin: 0px 0px 0px 3px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 3px;
+        background: transparent; }
+      .header__buttons_for_user__second span {
+        position: absolute;
+        color: white; }
+
 body {
-  background: black; }
+  margin: 0;
+  padding: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.hidden-submenu {
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0); }
