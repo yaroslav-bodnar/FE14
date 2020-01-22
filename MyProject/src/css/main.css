@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  height: 50px;
   background: black;
   display: -webkit-box;
   display: -webkit-flex;
@@ -12,7 +13,9 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   .header__logo_and_menu {
     width: 70%;
     display: -webkit-box;
@@ -24,10 +27,10 @@
         -ms-flex-align: center;
             align-items: center; }
   .header__logo {
-    margin: 0px 0px 0px 10px;
+    margin: 0px 10px 0px 10px;
     color: white;
     font-size: 22px; }
-    .header__logo span {
+    .header__logo > span {
       color: gold; }
   .header__menu {
     width: 100%;
@@ -43,14 +46,60 @@
             align-items: center;
     position: relative;
     z-index: 100; }
-    .header__menu li {
-      margin: 0px 0px 0px 3%; }
-      .header__menu li a {
+    .header__menu > li {
+      list-style: none; }
+      .header__menu > li > a {
         text-decoration: none;
         color: white;
-        font-size: 14px; }
-  .header__submenu {
-    position: absolute; }
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        display: block;
+        padding: 0px 8px;
+        overflow: hidden;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        .header__menu > li > a::before {
+          content: '';
+          position: absolute;
+          top: -webkit-calc(50% - 2px);
+          top: calc(50% - 2px);
+          left: -100%;
+          width: 100%;
+          height: 4px;
+          background: gold;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+        .header__menu > li > a:hover {
+          cursor: pointer; }
+          .header__menu > li > a:hover::before {
+            -webkit-animation: animate_menu .5s linear forwards;
+                    animation: animate_menu .5s linear forwards; }
+  .header__submenu__list {
+    position: absolute;
+    background: black;
+    margin: 0;
+    padding: 5px 15px;
+    top: 23px;
+    left: 51px; }
+    .header__submenu__list > li {
+      list-style: none; }
+      .header__submenu__list > li > a {
+        text-decoration: none;
+        color: white; }
+        .header__submenu__list > li > a:hover {
+          cursor: pointer;
+          color: gold; }
+  .header__submenu:hover .header__submenu__list {
+    -webkit-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
   .header__buttons_for_user {
     display: -webkit-box;
     display: -webkit-flex;
@@ -65,8 +114,10 @@
         -ms-flex-align: center;
             align-items: center; }
     .header__buttons_for_user__first {
-      position: relative; }
-      .header__buttons_for_user__first button {
+      position: relative;
+      width: 130px;
+      height: 30px; }
+      .header__buttons_for_user__first > button {
         margin: 0px;
         width: 130px;
         height: 30px;
@@ -74,27 +125,81 @@
         border-radius: 3px;
         background: transparent;
         color: white; }
-      .header__buttons_for_user__first span {
+      .header__buttons_for_user__first > span {
         position: absolute;
         color: white;
         top: 8px;
-        left: 100px; }
+        left: 100px;
+        font-size: 12px; }
     .header__buttons_for_user__second {
-      position: relative; }
-      .header__buttons_for_user__second button {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      margin: 0px 10px 0px 0px; }
+      .header__buttons_for_user__second > button {
         margin: 0px 0px 0px 3px;
         width: 30px;
         height: 30px;
         border: 1px solid white;
         border-radius: 3px;
         background: transparent; }
-      .header__buttons_for_user__second span {
+      .header__buttons_for_user__second > span {
         position: absolute;
-        color: white; }
+        color: white;
+        top: 6px;
+        right: 3px;
+        font-size: 13px; }
+
+@-webkit-keyframes animate_menu {
+  0% {
+    top: -webkit-calc(50% - 2px);
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1; }
+  50% {
+    top: -webkit-calc(50% - 2px);
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1; }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1; } }
+
+@keyframes animate_menu {
+  0% {
+    top: -webkit-calc(50% - 2px);
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1; }
+  50% {
+    top: -webkit-calc(50% - 2px);
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1; }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1; } }
+
+.home_top {
+  background: url(../img/home-top.jpg) no-repeat;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: static;
+  background-attachment: fixed; }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: Hind, sans-serif; }
 
 .visually-hidden {
   position: absolute;
