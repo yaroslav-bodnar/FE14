@@ -1,8 +1,134 @@
 .home_top
-	background: url(../img/home-top.jpg) no-repeat
+	background: url(../img/home_top/home-top.jpg) no-repeat
 	width: 100%
 	height: 100vh
 	overflow: hidden
-	// background-position: 50% 0px
+	background-position: 50% 0px
 	position: static
 	background-attachment: fixed
+
+	&__content
+		width: 1200px
+		margin: 20vh auto 0px auto
+
+		&__title
+			text-align: center
+
+			>h2
+				font-family: 'Josefin Sans', sans-serif
+				font-size: 60px
+				color: #fff
+
+		&__type_RS
+			width: 1200px
+			margin: 40px auto
+			padding: 0px 160px
+			box-sizing: border-box
+
+			&__list
+				width: 100%
+				list-style: none
+				margin: 0
+				padding: 0
+				display: flex
+				justify-content: space-between
+				text-align: center
+				color: #fff
+
+				li + li
+					border-left: 1px solid #fff
+					padding-left: 50px
+
+				li
+					>div
+						position: relative
+						box-sizing: border-box
+
+						>a
+							text-decoration: none
+							position: absolute
+							display: block
+							width: 100%
+							height: 100%
+							top: 0
+							left: 0
+
+						&:hover .home_top__content__type_RS__list__img
+							padding-bottom: 0px
+							padding-top: 10px
+							transition: .5s
+
+						&:hover .home_top__content__type_RS__list__dsc
+							color: #FFD700
+
+				&__img
+					padding-bottom: 10px
+		
+		&__search
+			width: 100%
+			max-width: 1200px
+			color: #fff
+
+			&__form
+				width: 100%
+				display: flex
+				justify-content: space-between
+				align-items: flex-end
+
+			&__city
+				width: 40%
+
+				label
+
+				&__icon
+
+					span
+
+				&__select
+					display: block
+					width: 100%
+					height: 40px
+					background: transparent
+					color: #fff
+					padding-left: 30px
+					outline: none
+
+					option
+						color: #000
+
+			&__status
+				width: 40%
+
+				label
+
+				&__icon
+
+					span
+
+				&__select
+					display: block
+					width: 100%
+					height: 40px
+					background: transparent
+					color: #fff
+					padding-left: 30px
+					outline: none
+
+					option
+						color: #000
+
+			&__button
+				width: 18%
+
+				button
+					width: 100%
+					height: 40px
+					margin: 0px
+					border-radius: 5px
+					border: none
+					background: #FFD700
+					text-transform: uppercase
+					font-size: 12px
+					letter-spacing: 3px
+					outline: none
+
